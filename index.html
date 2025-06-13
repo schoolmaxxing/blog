@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Football Chronicle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* gray-50 */
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #1d4ed8; /* blue-700 */
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .article-content h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .article-content h3 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+         .article-content p, .article-content li {
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75;
+            color: #374151; /* gray-700 */
+            margin-bottom: 1.25rem;
+        }
+        .article-content blockquote {
+            border-left: 4px solid #1d4ed8; /* blue-700 */
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #4b5563; /* gray-600 */
+        }
+        .article-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .source-link {
+            color: #6b7280; /* gray-500 */
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        .source-link:hover {
+            color: #1d4ed8; /* blue-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" id="home-link" class="text-2xl font-bold text-gray-800">
+                <i class="fas fa-futbol text-blue-600"></i> Global Football Chronicle
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="nav-link text-gray-600 font-medium">Home</a>
+                <a href="#" class="nav-link text-gray-600 font-medium">Champions League</a>
+                <a href="#" class="nav-link text-gray-600 font-medium">Premier League</a>
+                <a href="#" class="nav-link text-gray-600 font-medium">La Liga</a>
+                <a href="#" class="nav-link text-gray-600 font-medium">About</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        
+        <!-- Homepage View -->
+        <div id="homepage">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">The Latest in Football</h1>
+                <p class="text-lg text-gray-600">Your daily source for breaking news, analysis, and expert opinions on the beautiful game.</p>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1: Ronaldo -->
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTk0MjU0MDIzNDg0NDQyNzE0/imago1029800720h.webp" alt="Ronaldo scores for Portugal in the Nations League Final" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/FFFFFF?text=Ronaldo';">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600 font-semibold">Nations League</span>
+                        <h2 class="text-xl font-bold my-2">Ronaldo's Masterclass: Portugal Claims Second Nations League Title</h2>
+                        <p class="text-gray-600 mb-4">At 40 years old, Cristiano Ronaldo guided Portugal to a dramatic victory in the 2024–25 UEFA Nations League final against Spain.</p>
+                        <a href="#" id="read-ronaldo-article" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 2: Mock -->
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1568897378330-9799613a3b5a?q=80&w=2070&auto=format&fit=crop" alt="Champions League Trophy" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/334155/FFFFFF?text=Champions+League';">
+                    <div class="p-6">
+                        <span class="text-sm text-purple-600 font-semibold">Champions League</span>
+                        <h2 class="text-xl font-bold my-2">Kings of Europe: Real Madrid Clinch Record 16th Title</h2>
+                        <p class="text-gray-600 mb-4">A tactical masterclass from Ancelotti saw Madrid overcome a resilient Bayern Munich side in a tense final at Wembley.</p>
+                        <a href="#" class="text-purple-600 font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 3: Mock -->
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop" alt="Premier League Football" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/991b1b/FFFFFF?text=Premier+League';">
+                    <div class="p-6">
+                        <span class="text-sm text-red-600 font-semibold">Premier League</span>
+                        <h2 class="text-xl font-bold my-2">Down to the Wire: The Most Exciting Title Race in Years</h2>
+                        <p class="text-gray-600 mb-4">With three teams still in contention on the final day, we break down the permutations and key moments that defined the season.</p>
+                        <a href="#" class="text-red-600 font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article View (Initially Hidden) -->
+        <div id="article-page" class="hidden">
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <a href="#" id="back-to-home" class="text-blue-600 font-semibold hover:underline mb-8 inline-block">&larr; Back to All Articles</a>
+                
+                <header class="mb-8">
+                     <span class="text-sm text-blue-600 font-semibold">Football &bull; Jun 13, 2025</span>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 my-4 leading-tight">Ageless Wonder: Ronaldo’s Masterclass Secures Second Nations League Title for Portugal</h1>
+                    <p class="text-xl text-gray-500">At 40 years old, the five‑time Ballon d’Or winner remains not just relevant—but decisive, adding another chapter to his legendary career.</p>
+                </header>
+                
+                <img src="https://s.hdnux.com/photos/01/46/05/22/26768371/3/1200x0.jpg" alt="Portugal's players celebrate after winning the Nations League final" class="w-full rounded-lg mb-8 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/800x500/000000/FFFFFF?text=Portugal+Champions';">
+
+                <article class="article-content">
+                    <p>Cristiano Ronaldo has added yet another chapter to his legendary career, guiding Portugal to a dramatic victory in the 2024–25 UEFA Nations League. At 40 years old, the five‑time Ballon d’Or winner remains not just relevant—but decisive.</p>
+                    
+                    <h3><i class="fas fa-trophy text-yellow-500 mr-2"></i>A Historic Night in Munich</h3>
+                    <p>In a pulsating final at Munich’s Allianz Arena, Portugal faced Spain in what became an instant classic. Spain took the lead twice—first via Martín Zubimendi and then Mikel Oyarzabal—only for Portugal to rally. Nuno Mendes equalized before halftime and later set up Ronaldo’s thunderous volley in the 61st minute, forcing the match into extra time. Neither team could break the deadlock, leading to a penalty shootout where Portugal triumphed 5–3, clinching the title as the first nation to win the Nations League twice.</p>
+                    
+                    <h3>Ronaldo: The Undisputed Leader</h3>
+                    <p>Ronaldo scored his 138th international goal to level the final, extending his all‑time scoring record for Portugal. Though he exited injured in the 88th minute, he watched the shootout with raw emotion. Footage shows him collapsing onto the turf, tears streaming as his teammates secured the win.</p>
+                    
+                    <blockquote>“Winning with the national team is always something very special… These are tears. Mission accomplished and so much joy.”</blockquote>
+                    
+                    <p>This triumph marks his third major international title—after UEFA Euro 2016 and the 2019 Nations League—and his second Nations League crown as captain, solidifying his unparalleled legacy.</p>
+
+                    <h3><i class="fas fa-chess-king text-blue-700 mr-2"></i>Tactical Brilliance & Collective Resolve</h3>
+                    <ul>
+                        <li><strong>Coach Martínez’s Winning Philosophy:</strong> Roberto Martínez, Portugal’s manager since January 2023, has cultivated a high-performing, tight-knit squad with a remarkable 70% win rate— the best for any Portuguese national team coach. He praised Ronaldo’s influence, noting his mix of “unique experience” and exceptional goalscoring form: 20 in 25 recent matches.</li>
+                        <li><strong>Mendes, Defensive Anchor & Set-Piece Threat:</strong> A standout performer, Nuno Mendes not only neutralized Spain’s young star Lamine Yamal, but also opened the scoring and helped engineer Ronaldo’s equalizer. His composure was decisive in the shootout, earning him Player of the Match honors.</li>
+                        <li><strong>Penalty Drama & Costa’s Crucial Save:</strong> Diogo Costa was the hero between the sticks, saving Morata’s effort during the shootout. With flawless execution from his teammates, Portugal held strong to claim victory.</li>
+                    </ul>
+
+                    <h3>Legacy, Future & Ronaldo’s Uncertain Next Steps</h3>
+                    <p>This emotional victory reaffirmed Ronaldo’s undiminished hunger to excel for Portugal. While speculation swirls around his club future—prompted by contract talks with Al‑Nassr and interest from clubs in the U.S. and beyond—Ronaldo insisted he remains focused on rest and recovery following this triumph.</p>
+
+                    <h3>The Bigger Picture</h3>
+                    <p>Portugal’s win reinforces their growing dominance in the Nations League. As fans look ahead to Euro 2028 and another World Cup cycle, Ronaldo’s enduring presence will again be central to their ambitions.</p>
+
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <h4 class="text-lg font-semibold mb-3">Sources:</h4>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                            <a href="https://www.straitstimes.com/sport/football/portugals-emotional-ronaldo-rejoices-in-winning-nations-league" target="_blank" class="source-link">Reuters</a>
+                            <a href="https://apnews.com/article/spain-portugal-nations-league-de-la-fuente-177ad16d92b51e68361393ee372b7f2f" target="_blank" class="source-link">AP News</a>
+                            <a href="https://www.si.com/soccer/cristiano-ronaldo-leads-portugal-to-glory-takeaways-from-nations-league-final" target="_blank" class="source-link">Sports Illustrated</a>
+                            <a href="https://www.espn.com/soccer/story/_/id/40320499/unique-cristiano-ronaldo-deserves-portugal-spot-roberto-martinez" target="_blank" class="source-link">ESPN</a>
+                            <a href="https://timesofindia.indiatimes.com/sports/football/top-stories/watch-cristiano-ronaldo-breaks-down-in-tears-falls-to-knees-after-portugal-beat-spain-in-nations-league-final/articleshow/121716019.cms" target="_blank" class="source-link">Times of India</a>
+                            <a href="https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_final" target="_blank" class="source-link">Wikipedia</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 py-8 border-t">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Global Football Chronicle. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navigation Logic ---
+        const homepage = document.getElementById('homepage');
+        const articlePage = document.getElementById('article-page');
+
+        const readRonaldoArticleLink = document.getElementById('read-ronaldo-article');
+        const backToHomeLink = document.getElementById('back-to-home');
+        const homeNavLink = document.getElementById('home-link');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function showPage(pageToShow) {
+            // Hide all pages
+            homepage.classList.add('hidden');
+            articlePage.classList.add('hidden');
+
+            // Show the selected page
+            if (pageToShow) {
+                pageToShow.classList.remove('hidden');
+            }
+            window.scrollTo(0, 0); // Scroll to top on page change
+        }
+        
+        function showHomepage(e){
+             e.preventDefault();
+             showPage(homepage);
+        }
+
+        // --- Event Listeners ---
+        readRonaldoArticleLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage(articlePage);
+        });
+
+        backToHomeLink.addEventListener('click', showHomepage);
+        homeNavLink.addEventListener('click', showHomepage);
+        
+        // Make nav links go to homepage (as other pages aren't built)
+        navLinks.forEach(link => {
+            if(link.textContent.trim().toLowerCase() === 'home'){
+                 link.addEventListener('click', showHomepage);
+            }
+        });
+
+
+        // Initialize to show the homepage
+        showPage(homepage);
+    </script>
+
+</body>
+</html>
