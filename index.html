@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,61 +12,104 @@
         /* Custom styles */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* gray-50 */
+            background-color: #f8fafc;
+            /* gray-50 */
         }
+
         .nav-link {
             transition: color 0.3s ease;
         }
+
         .nav-link:hover {
-            color: #1d4ed8; /* blue-700 */
+            color: #1d4ed8;
+            /* blue-700 */
         }
+
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
         .article-content h2 {
-            font-size: 1.875rem; /* text-3xl */
+            font-size: 1.875rem;
+            /* text-3xl */
             font-weight: 700;
             margin-top: 2rem;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
+
         .article-content h3 {
-            font-size: 1.5rem; /* text-2xl */
+            font-size: 1.5rem;
+            /* text-2xl */
             font-weight: 600;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
         }
-         .article-content p, .article-content li {
-            font-size: 1.125rem; /* text-lg */
+
+        .article-content p,
+        .article-content li {
+            font-size: 1.125rem;
+            /* text-lg */
             line-height: 1.75;
-            color: #374151; /* gray-700 */
+            color: #374151;
+            /* gray-700 */
             margin-bottom: 1.25rem;
         }
+
         .article-content blockquote {
-            border-left: 4px solid #1d4ed8; /* blue-700 */
+            border-left: 4px solid #1d4ed8;
+            /* blue-700 */
             padding-left: 1rem;
             margin: 1.5rem 0;
             font-style: italic;
-            color: #4b5563; /* gray-600 */
+            color: #4b5563;
+            /* gray-600 */
         }
+
         .article-content ul {
             list-style-type: disc;
             padding-left: 1.5rem;
         }
+
         .source-link {
-            color: #6b7280; /* gray-500 */
+            color: #6b7280;
+            /* gray-500 */
             text-decoration: underline;
             transition: color 0.3s ease;
         }
+
         .source-link:hover {
-            color: #1d4ed8; /* blue-700 */
+            color: #1d4ed8;
+            /* blue-700 */
+        }
+
+        #article-container table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+        }
+
+        #article-container th,
+        #article-container td {
+            border: 1px solid #e5e7eb;
+            /* gray-200 */
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        #article-container th {
+            background-color: #f3f4f6;
+            /* gray-100 */
+            font-weight: 600;
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
@@ -75,10 +119,6 @@
                 <i class="fas fa-futbol text-blue-600"></i> Global Football Chronicle
             </a>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#" class="nav-link text-gray-600 font-medium">Home</a>
-                <a href="#" class="nav-link text-gray-600 font-medium">Champions League</a>
-                <a href="#" class="nav-link text-gray-600 font-medium">Premier League</a>
-                <a href="#" class="nav-link text-gray-600 font-medium">La Liga</a>
                 <a href="#" class="nav-link text-gray-600 font-medium">About</a>
             </div>
             <button class="md:hidden text-gray-600 focus:outline-none">
@@ -89,102 +129,38 @@
 
     <!-- Main Content -->
     <main class="container mx-auto p-6">
-        
+
         <!-- Homepage View -->
         <div id="homepage">
             <div class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">The Latest in Football</h1>
-                <p class="text-lg text-gray-600">Your daily source for breaking news, analysis, and expert opinions on the beautiful game.</p>
+                <p class="text-lg text-gray-600">Your daily source for breaking news, analysis, and expert opinions on
+                    the beautiful game.</p>
             </div>
-
             <!-- Articles Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Article Card 1: Ronaldo -->
-                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTk0MjU0MDIzNDg0NDQyNzE0/imago1029800720h.webp" alt="Ronaldo scores for Portugal in the Nations League Final" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/FFFFFF?text=Ronaldo';">
-                    <div class="p-6">
-                        <span class="text-sm text-blue-600 font-semibold">Nations League</span>
-                        <h2 class="text-xl font-bold my-2">Ronaldo's Masterclass: Portugal Claims Second Nations League Title</h2>
-                        <p class="text-gray-600 mb-4">At 40 years old, Cristiano Ronaldo guided Portugal to a dramatic victory in the 2024–25 UEFA Nations League final against Spain.</p>
-                        <a href="#" id="read-ronaldo-article" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Article Card 2: Mock -->
-                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1568897378330-9799613a3b5a?q=80&w=2070&auto=format&fit=crop" alt="Champions League Trophy" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/334155/FFFFFF?text=Champions+League';">
-                    <div class="p-6">
-                        <span class="text-sm text-purple-600 font-semibold">Champions League</span>
-                        <h2 class="text-xl font-bold my-2">Kings of Europe: Real Madrid Clinch Record 16th Title</h2>
-                        <p class="text-gray-600 mb-4">A tactical masterclass from Ancelotti saw Madrid overcome a resilient Bayern Munich side in a tense final at Wembley.</p>
-                        <a href="#" class="text-purple-600 font-semibold hover:underline">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Article Card 3: Mock -->
-                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop" alt="Premier League Football" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/991b1b/FFFFFF?text=Premier+League';">
-                    <div class="p-6">
-                        <span class="text-sm text-red-600 font-semibold">Premier League</span>
-                        <h2 class="text-xl font-bold my-2">Down to the Wire: The Most Exciting Title Race in Years</h2>
-                        <p class="text-gray-600 mb-4">With three teams still in contention on the final day, we break down the permutations and key moments that defined the season.</p>
-                        <a href="#" class="text-red-600 font-semibold hover:underline">Read More &rarr;</a>
-                    </div>
-                </div>
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article cards will be dynamically inserted here -->
             </div>
         </div>
 
-        <!-- Article View (Initially Hidden) -->
+        <!-- Single Article View (Initially Hidden) -->
         <div id="article-page" class="hidden">
+            <div id="article-container" class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <!-- Full article content will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- About Page View (Initially Hidden) -->
+        <div id="about-page" class="hidden">
             <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
-                <a href="#" id="back-to-home" class="text-blue-600 font-semibold hover:underline mb-8 inline-block">&larr; Back to All Articles</a>
-                
-                <header class="mb-8">
-                     <span class="text-sm text-blue-600 font-semibold">Football &bull; Jun 13, 2025</span>
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 my-4 leading-tight">Ageless Wonder: Ronaldo’s Masterclass Secures Second Nations League Title for Portugal</h1>
-                    <p class="text-xl text-gray-500">At 40 years old, the five‑time Ballon d’Or winner remains not just relevant—but decisive, adding another chapter to his legendary career.</p>
-                </header>
-                
-                <img src="https://s.hdnux.com/photos/01/46/05/22/26768371/3/1200x0.jpg" alt="Portugal's players celebrate after winning the Nations League final" class="w-full rounded-lg mb-8 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/800x500/000000/FFFFFF?text=Portugal+Champions';">
-
-                <article class="article-content">
-                    <p>Cristiano Ronaldo has added yet another chapter to his legendary career, guiding Portugal to a dramatic victory in the 2024–25 UEFA Nations League. At 40 years old, the five‑time Ballon d’Or winner remains not just relevant—but decisive.</p>
-                    
-                    <h3><i class="fas fa-trophy text-yellow-500 mr-2"></i>A Historic Night in Munich</h3>
-                    <p>In a pulsating final at Munich’s Allianz Arena, Portugal faced Spain in what became an instant classic. Spain took the lead twice—first via Martín Zubimendi and then Mikel Oyarzabal—only for Portugal to rally. Nuno Mendes equalized before halftime and later set up Ronaldo’s thunderous volley in the 61st minute, forcing the match into extra time. Neither team could break the deadlock, leading to a penalty shootout where Portugal triumphed 5–3, clinching the title as the first nation to win the Nations League twice.</p>
-                    
-                    <h3>Ronaldo: The Undisputed Leader</h3>
-                    <p>Ronaldo scored his 138th international goal to level the final, extending his all‑time scoring record for Portugal. Though he exited injured in the 88th minute, he watched the shootout with raw emotion. Footage shows him collapsing onto the turf, tears streaming as his teammates secured the win.</p>
-                    
-                    <blockquote>“Winning with the national team is always something very special… These are tears. Mission accomplished and so much joy.”</blockquote>
-                    
-                    <p>This triumph marks his third major international title—after UEFA Euro 2016 and the 2019 Nations League—and his second Nations League crown as captain, solidifying his unparalleled legacy.</p>
-
-                    <h3><i class="fas fa-chess-king text-blue-700 mr-2"></i>Tactical Brilliance & Collective Resolve</h3>
-                    <ul>
-                        <li><strong>Coach Martínez’s Winning Philosophy:</strong> Roberto Martínez, Portugal’s manager since January 2023, has cultivated a high-performing, tight-knit squad with a remarkable 70% win rate— the best for any Portuguese national team coach. He praised Ronaldo’s influence, noting his mix of “unique experience” and exceptional goalscoring form: 20 in 25 recent matches.</li>
-                        <li><strong>Mendes, Defensive Anchor & Set-Piece Threat:</strong> A standout performer, Nuno Mendes not only neutralized Spain’s young star Lamine Yamal, but also opened the scoring and helped engineer Ronaldo’s equalizer. His composure was decisive in the shootout, earning him Player of the Match honors.</li>
-                        <li><strong>Penalty Drama & Costa’s Crucial Save:</strong> Diogo Costa was the hero between the sticks, saving Morata’s effort during the shootout. With flawless execution from his teammates, Portugal held strong to claim victory.</li>
-                    </ul>
-
-                    <h3>Legacy, Future & Ronaldo’s Uncertain Next Steps</h3>
-                    <p>This emotional victory reaffirmed Ronaldo’s undiminished hunger to excel for Portugal. While speculation swirls around his club future—prompted by contract talks with Al‑Nassr and interest from clubs in the U.S. and beyond—Ronaldo insisted he remains focused on rest and recovery following this triumph.</p>
-
-                    <h3>The Bigger Picture</h3>
-                    <p>Portugal’s win reinforces their growing dominance in the Nations League. As fans look ahead to Euro 2028 and another World Cup cycle, Ronaldo’s enduring presence will again be central to their ambitions.</p>
-
-                    <div class="mt-12 pt-8 border-t border-gray-200">
-                        <h4 class="text-lg font-semibold mb-3">Sources:</h4>
-                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-                            <a href="https://www.straitstimes.com/sport/football/portugals-emotional-ronaldo-rejoices-in-winning-nations-league" target="_blank" class="source-link">Reuters</a>
-                            <a href="https://apnews.com/article/spain-portugal-nations-league-de-la-fuente-177ad16d92b51e68361393ee372b7f2f" target="_blank" class="source-link">AP News</a>
-                            <a href="https://www.si.com/soccer/cristiano-ronaldo-leads-portugal-to-glory-takeaways-from-nations-league-final" target="_blank" class="source-link">Sports Illustrated</a>
-                            <a href="https://www.espn.com/soccer/story/_/id/40320499/unique-cristiano-ronaldo-deserves-portugal-spot-roberto-martinez" target="_blank" class="source-link">ESPN</a>
-                            <a href="https://timesofindia.indiatimes.com/sports/football/top-stories/watch-cristiano-ronaldo-breaks-down-in-tears-falls-to-knees-after-portugal-beat-spain-in-nations-league-final/articleshow/121716019.cms" target="_blank" class="source-link">Times of India</a>
-                            <a href="https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_final" target="_blank" class="source-link">Wikipedia</a>
-                        </div>
-                    </div>
-                </article>
+                <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">About This Site</h1>
+                <div class="article-content">
+                    <p>My name is Minh Tran, and I love soccer!</p>
+                    <p>This website was created as part of my project for the Communications merit badge. I wanted to
+                        build something that combines my passion for the beautiful game with the skills I'm learning in
+                        communication and web development.</p>
+                    <p>Thank you for visiting!</p>
+                </div>
             </div>
         </div>
 
@@ -203,52 +179,349 @@
     </footer>
 
     <script>
-        // --- Navigation Logic ---
+        // --- DATA ---
+        // This object acts as a simple database for the articles.
+        const articles = {
+            'ronaldo-nations-league': {
+                id: 'ronaldo-nations-league',
+                category: 'Nations League',
+                categoryColor: 'text-blue-600',
+                title: "Ronaldo's Masterclass: Portugal Claims Second Nations League Title",
+                summary: "At 40, Cristiano Ronaldo guided Portugal to a dramatic victory in the 2024–25 UEFA Nations League final.",
+                imageUrl: 'https://cms.sabcsport.com/storage/images/portugal-s-cristiano-ronaldo-lifts-the-nations-league-trophy-8-june-202516.webp',
+                imageAlt: "Ronaldo lifting the Nations League trophy",
+                fullImage: 'https://static.srpcdigital.com/styles/1037xauto/public/2025-06/1089255_0.jpeg.webp',
+                fullImageAlt: "Portugal's players celebrate after winning the Nations League final",
+                date: 'Jun 13, 2025',
+                videoUrl: 'https://www.youtube.com/watch?v=iPQaIEtlzJk',
+                content: `
+                    <p>Cristiano Ronaldo has added yet another chapter to his legendary career, guiding Portugal to a dramatic victory in the 2024–25 UEFA Nations League. At 40 years old, the five‑time Ballon d’Or winner remains not just relevant—but decisive.</p>
+                    <h3>�🇹 A Historic Night in Munich</h3>
+                    <p>In a pulsating final at Munich’s Allianz Arena, Portugal faced Spain in what became an instant classic. Spain took the lead twice—first via Martín Zubimendi and then Mikel Oyarzabal—only for Portugal to rally. Nuno Mendes equalized before halftime and later set up Ronaldo’s thunderous volley in the 61st minute, forcing the match into extra time. Neither team could break the deadlock, leading to a penalty shootout where Portugal triumphed 5–3, clinching the title as the first nation to win the Nations League twice.</p>
+                    <h3>Ronaldo: The Undisputed Leader</h3>
+                    <p>Ronaldo scored his 138th international goal to level the final, extending his all‑time scoring record for Portugal. Though he exited injured in the 88th minute, he watched the shootout with raw emotion. Footage shows him collapsing onto the turf, tears streaming as his teammates secured the win.</p>
+                    <blockquote>“Winning with the national team is always something very special… These are tears. Mission accomplished and so much joy.”</blockquote>
+                    <p>This triumph marks his third major international title—after UEFA Euro 2016 and the 2019 Nations League—and his second Nations League crown as captain, solidifying his unparalleled legacy.</p>
+                    <h3>Tactical Brilliance & Collective Resolve</h3>
+                    <p><strong>1. Coach Martínez’s Winning Philosophy</strong><br>Roberto Martínez, Portugal’s manager since January 2023, has cultivated a high-performing, tight-knit squad with a remarkable 70% win rate— the best for any Portuguese national team coach. He praised Ronaldo’s influence, noting his mix of “unique experience” and exceptional goalscoring form: 20 in 25 recent matches.</p>
+                    <p><strong>2. Mendes, Defensive Anchor & Set-Piece Threat</strong><br>A standout performer, Nuno Mendes not only neutralized Spain’s young star Lamine Yamal, but also opened the scoring and helped engineer Ronaldo’s equalizer. His composure was decisive in the shootout, earning him Player of the Match honors and marking a meteoric rise at PSG and internationally.</p>
+                    <p><strong>3. Penalty Drama & Costa’s Crucial Save</strong><br>Diogo Costa was the hero between the sticks, saving Morata’s effort during the shootout. With flawless execution from his teammates, Portugal held strong to claim victory.</p>
+                    <h3>Legacy, Future & Ronaldo’s Uncertain Next Steps</h3>
+                    <p>This emotional victory reaffirmed Ronaldo’s undiminished hunger to excel for Portugal. While speculation swirls around his club future—prompted by contract talks with Al‑Nassr and interest from clubs in the U.S. and beyond—Ronaldo insisted he remains focused on rest and recovery following this triumph.</p>
+                    <p>The spectacle also offered one of the most memorable coach–captain moments: Martínez highlighted Ronaldo as “a football lesson every day,” while warning that coaching was about facts—not sentiment.</p>
+                    <h3>The Bigger Picture</h3>
+                    <p>Portugal’s win reinforces their growing dominance in the Nations League—back‑to‑back champions in just three editions . As fans look ahead to Euro 2028 and another World Cup cycle, Ronaldo’s enduring presence will again be central to their ambitions.</p>
+                    <h3>🎥 Relive the Moment</h3>
+                    <p>Portugal claim UEFA Nations League glory for the second time.</p>
+                    <h3>In Summary</h3>
+                    <p>Cristiano Ronaldo’s Nations League triumph is more than another accolade—it’s an emotional milestone for Portugal’s captain, a tactical victory for coach Martínez, and proof that youth (like Mendes) and experience (like Ronaldo) can power a team to glory. As his storied career progresses, one thing is clear: Ronaldo's legacy isn't fading—it's still being written.</p>
+                `,
+                sources: [{
+                        name: 'reuters.com',
+                        url: 'https://www.straitstimes.com/sport/football/portugals-emotional-ronaldo-rejoices-in-winning-nations-league'
+                    },
+                    {
+                        name: 'apnews.com',
+                        url: 'https://apnews.com/article/spain-portugal-ronaldo-yamal-nations-league-08edafeeb89d4282849775be49a166c5'
+                    },
+                    {
+                        name: 'elpais.com',
+                        url: 'https://elpais.com/deportes/futbol/2025-06-13/roberto-martinez-seleccionador-de-portugal-me-encuentro-fuerte-hasta-la-proxima-derrota.html'
+                    },
+                    {
+                        name: 'talksport.com',
+                        url: 'https://talksport.com/football/3273417/unseen-footage-cristiano-ronaldo-reaction-portugal-spain-nations-league/'
+                    },
+                    {
+                        name: 'si.com',
+                        url: 'https://www.si.com/soccer/cristiano-ronaldo-leads-portugal-to-glory-takeaways-from-nations-league-final'
+                    },
+                    {
+                        name: 'en.wikipedia.org',
+                        url: 'https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_final'
+                    },
+                ]
+            },
+            'liverpool-premier-league': {
+                id: 'liverpool-premier-league',
+                category: 'Premier League',
+                categoryColor: 'text-red-600',
+                title: 'Liverpool Lift Premier League Trophy as 2024-25 Champions',
+                summary: "Arne Slot's side sealed a historic 20th top-flight title, ending a five-year wait for the league crown.",
+                imageUrl: 'https://i.ytimg.com/vi/LPDhcr78e_A/hq720.jpg?rs=AOn4CLDrHkNTntLRfpuWe_vyUTqKB2BW2w&sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD',
+                imageAlt: "Liverpool players celebrating with the Premier League trophy",
+                fullImage: 'https://e0.365dm.com/25/05/2048x1152/skysports-van-dijk_6927281.jpg?20250525190143=',
+                fullImageAlt: 'Virgil van Dijk lifting the Premier League trophy',
+                date: 'May 26, 2025',
+                videoUrl: 'https://www.youtube.com/watch?v=y2kYq2p2s3U',
+                content: `
+                    <p>Liverpool have been crowned 2024‑25 Premier League champions, sealing a historic 20th top‑flight title with a resounding 5–1 victory over Tottenham Hotspur at Anfield on 27 April 2025. This triumph not only ends a five‑year wait since their 2019–20 win but also brings them level with Manchester United on the all‑time honours list.</p>
+                    <h3>🏟️ Title Day Euphoria at Anfield</h3>
+                    <p>Anfield erupted in a sea of red as Mohamed Salah put the Reds on course for the crown, and the stadium shook like a wedding celebration, according to The Guardian’s Barney Ronay. Arne Slot, in his debut season, stood tall—thanking predecessor Jürgen Klopp for laying the groundwork and leading Liverpool to their second Premier League title under his leadership.</p>
+                    <h3>🎯 Slot’s Immediate Impact</h3>
+                    <p>Appointed on 20 May 2024, Slot made an immediate impression: his Liverpool side started the Premier League with six straight away wins, the first Liverpool manager to do so this century. His tactical nous paid off, guiding Liverpool to 84 points, ten clear of second‑placed Arsenal. Drawing on his coaching pedigree, Slot became only the fifth manager in history to win the Premier League in his debut season with a club.</p>
+                    <h3>🔑 Season Defining Factors</h3>
+                    <p><strong>Consistent Scoring Away from Home:</strong> For the first time in club history, Liverpool registered a goal in every away league match.</p>
+                    <p><strong>Mid‑season dip avoided:</strong> A slight wobble in January, with just one win in four matches, prompted a stern Slot warning—his message to avoid complacency proved decisive.</p>
+                    <p><strong>Stars Rising & Holding Firm:</strong> Mohamed Salah shone—garnering 47 goal contributions—earning him unanimous acclaim as the season’s best player. Defensive anchors like Virgil van Dijk sealed extensions, ensuring squad stability late in the campaign.</p>
+                    <h3>🏅 Celebrations and a Sobering Moment</h3>
+                    <p>The trophy was officially handed over following a 1–1 draw with Crystal Palace on 25 May, ahead of the grand parade on 26 May. Fittingly, fans flooded the streets—but celebrations turned tense when a car drove into the crowd, causing injuries—a somber note on an otherwise euphoric occasion.</p>
+                    <h3>🔮 Looking Ahead: Sustaining the Summit</h3>
+                    <p>Liverpool’s summer is already busy: Florian Wirtz is on the cusp of a club‑record £116 million move, Jeremie Frimpong has arrived, and investment in youth like Milos Kerkez is underway. Outgoings include long-serving Andrew Robertson and Trent Alexander‑Arnold, the latter joining Real Madrid. Slot's challenge is clear: blend wise recruitment with tactical evolution to defend their crown.</p>
+                    <h3>📈 Legacy and Significance</h3>
+                    <p>This title joins Liverpool’s illustrious trophy cabinet, equalling Manchester United’s record of 20 English League titles. Under Slot, the club has not just reclaimed domestic dominance but also reasserted their identity—pragmatic, potent, and progressive.</p>
+                    <h3>In Summary</h3>
+                    <p>Liverpool’s 2024–25 Premier League win is a testament to seamless transition—from Klopp to Slot—a united squad, and unwavering ambition. As celebrations linger and summer moves unfold, Anfield has once again become the epicentre of English football glory. The burning question now: can Arne Slot’s revolution become a dynasty?</p>
+                     <h3>🎥 Relive the Moment</h3>
+                `,
+                sources: [{
+                        name: 'talksport.com',
+                        url: 'https://talksport.com/football/1884323/liverpool-premier-league-champions-man-utd-20-titles/'
+                    },
+                    {
+                        name: 'theguardian.com',
+                        url: 'https://www.theguardian.com/football/article/2024/may/20/arne-slot-confirms-he-will-be-new-liverpool-manager-feyenoord'
+                    },
+                    {
+                        name: 'en.wikipedia.org',
+                        url: 'https://en.wikipedia.org/wiki/2024%E2%80%9325_Liverpool_F.C._season'
+                    },
+                    {
+                        name: 'thesun.co.uk',
+                        url: 'https://www.thesun.co.uk/sport/28026115/liverpool-man-utd-trophies-won-all-time/'
+                    },
+                ]
+            },
+            'psg-champions-league': {
+                id: 'psg-champions-league',
+                category: 'Champions League',
+                categoryColor: 'text-sky-600',
+                title: "PSG Secure First Champions League Title in Stunning Victory",
+                summary: "Luis Enrique's youthful side demolished Inter Milan 5-0 to claim the historic treble and European glory.",
+                imageUrl: 'https://imengine.prod.srp.navigacloud.com/?q=75&type=primary&uuid=32623637-3930-4431-b730-323935306133&width=1024',
+                imageAlt: 'PSG players celebrating with the Champions League trophy',
+                fullImage: 'https://s.france24.com/media/display/b2a8f706-3f57-11f0-82a2-005056bf30b7/w%3A1280/p%3A4x3/J24%20PSG.jpg',
+                fullImageAlt: 'Désiré Doué celebrating his goal in the Champions League final',
+                date: 'May 31, 2025',
+                videoUrl: null, // No video provided for this article
+                content: `
+                    <p>Paris Saint‑Germain has finally captured European club football’s ultimate prize—clinching their first-ever UEFA Champions League title with a stunning 5‑0 demolition of Inter Milan in the final at Munich’s Allianz Arena on May 31, 2025.</p>
+                    <h3>🏆 A Night for History: Munich Final</h3>
+                    <p>The final began with PSG’s swift, tactical precision. In just 12 minutes, debutant Désiré Doué, a rising 19-year-old winger, opened the scoring and later set up Achraf Hakimi’s goal. Doué then struck again to make it 3‑0, before Khvicha Kvaratskhelia and teenage substitute Senny Mayulu added two late goals—completing a historic margin that matched PSG's ambition with precision.</p>
+                    <p>Luis Enrique’s leadership and tactical reshaping earned him a second Champions League title, making him one of just a handful of coaches to lift Europe’s top club trophy twice.</p>
+                    <h3>🌟 Stars of the Show</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Role in Final</th>
+                                <th>Context</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Désiré Doué</td>
+                                <td>2 goals + 1 assist, Man of the Match</td>
+                                <td>Became youngest to score a brace and assist, symbolic of PSG’s youth revolution</td>
+                            </tr>
+                            <tr>
+                                <td>Khvicha Kvaratskhelia</td>
+                                <td>Late 4th goal, midfield dynamo</td>
+                                <td>January signing integral to PSG’s high-press system</td>
+                            </tr>
+                             <tr>
+                                <td>Senny Mayulu</td>
+                                <td>5th goal as sub</td>
+                                <td>Became one of youngest scorers in CL final</td>
+                            </tr>
+                            <tr>
+                                <td>Ousmane Dembélé & Gianluigi Donnarumma</td>
+                                <td>Creative spark & defensive anchor</td>
+                                <td>Dembélé had 12 assists in CL; Donnarumma starred in semis and rounds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Paris Erupts—and Tumbles</h3>
+                    <p>Scenes of triumph turned tragic as celebrations across Paris spun into violence: riots erupted around the Parc des Princes and Champs‑Élysées, resulting in two fatalities, nearly 200 injuries, over 500 arrests, and significant property damage.</p>
+                    <p>At the homecoming parade, club captain Marquinhos hoisted the trophy as fans showered the team with flares and cheers—a euphoric yet chaotic spectacle.</p>
+                    <h3>📈 A Treble & a Turning Point</h3>
+                    <p>PSG’s historic double-double season — winning Ligue 1, Coupe de France, and the Champions League — marks the first continental treble by a French club, solidifying their shift from star collection to a coherent powerhouse.</p>
+                    <p>Luis Enrique’s turnover of the squad, bringing in youth like Doué, Kvaratskhelia, and Mayulu, has propelled PSG into the elite echelons of European football.</p>
+                    <h3>🔮 What Comes Next?</h3>
+                    <p><strong>Consolidation in Europe:</strong> Ensuring this milestone isn’t fleeting, PSG must maintain their tactical edge and avoid complacency.</p>
+                    <p><strong>Club World Cup preparation:</strong> PSG, entering the expanded Club World Cup, are favorites after this dominant win.</p>
+                    <p><strong>Squad planning:</strong> Retaining emerging stars while possibly adding depth will be crucial to defend their unprecedented treble.</p>
+                    <h3>📝 Summary</h3>
+                    <p>Paris Saint‑Germain’s emphatic 5–0 Champions League final victory isn’t just gold—it’s legacy. It validates their rise from perennial nearly-men to European aristocracy, driven by youthful dynamism, strategic coaching, and disciplined team-building. Yet in the frenzy of celebration, serious reflection is needed—both on and off the pitch—to make this triumph a foundation, not a flash.</p>
+                `,
+                sources: [{
+                        name: 'aljazeera.com',
+                        url: 'https://www.aljazeera.com/sports/2025/5/31/psg-beat-inter-milan-to-lift-champions-league-football-doue-paris-saint-germain'
+                    },
+                    {
+                        name: 'fourfourtwo.com',
+                        url: 'https://www.fourfourtwo.com/news/live/champions-league-final-live-all-the-action-from-psg-vs-inter'
+                    },
+                    {
+                        name: 'wbng.com',
+                        url: 'https://www.wbng.com/2025/05/31/paris-saint-germain-routs-inter-milan-win-champions-league-first-time/'
+                    },
+                    {
+                        name: 'pressdemocrat.com',
+                        url: 'https://www.pressdemocrat.com/article/sports/2-fans-died-and-an-officer-is-in-a-coma-after-champions-league-celebrations/'
+                    },
+                    {
+                        name: 'timesofindia.indiatimes.com',
+                        url: 'https://timesofindia.indiatimes.com/sports/football/top-stories/psg-win-first-champions-league-title-with-historic-5-0-victory-over-inter-milan/articleshow/121544471.cms'
+                    },
+                    {
+                        name: 'en.wikipedia.org',
+                        url: 'https://en.wikipedia.org/wiki/2025_UEFA_Champions_League_final'
+                    },
+                ]
+            }
+        };
+
+        // --- ELEMENTS ---
         const homepage = document.getElementById('homepage');
         const articlePage = document.getElementById('article-page');
-
-        const readRonaldoArticleLink = document.getElementById('read-ronaldo-article');
-        const backToHomeLink = document.getElementById('back-to-home');
-        const homeNavLink = document.getElementById('home-link');
+        const aboutPage = document.getElementById('about-page');
+        const articlesGrid = document.getElementById('articles-grid');
+        const articleContainer = document.getElementById('article-container');
+        const homeLink = document.getElementById('home-link');
         const navLinks = document.querySelectorAll('.nav-link');
 
+        // --- FUNCTIONS ---
+
+        /**
+         * Hides all pages and shows the specified one.
+         * @param {HTMLElement} pageToShow The page element to display.
+         */
         function showPage(pageToShow) {
-            // Hide all pages
             homepage.classList.add('hidden');
             articlePage.classList.add('hidden');
-
-            // Show the selected page
+            aboutPage.classList.add('hidden');
             if (pageToShow) {
                 pageToShow.classList.remove('hidden');
             }
-            window.scrollTo(0, 0); // Scroll to top on page change
-        }
-        
-        function showHomepage(e){
-             e.preventDefault();
-             showPage(homepage);
+            window.scrollTo(0, 0);
         }
 
-        // --- Event Listeners ---
-        readRonaldoArticleLink.addEventListener('click', (e) => {
-            e.preventDefault();
+        /**
+         * Renders the article cards on the homepage.
+         */
+        function renderHomepage() {
+            articlesGrid.innerHTML = ''; // Clear existing grid
+            for (const articleId in articles) {
+                const article = articles[articleId];
+                const cardHtml = `
+                    <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="${article.imageUrl}" alt="${article.imageAlt}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/FFFFFF?text=Image';">
+                        <div class="p-6">
+                            <span class="text-sm ${article.categoryColor} font-semibold">${article.category}</span>
+                            <h2 class="text-xl font-bold my-2">${article.title}</h2>
+                            <p class="text-gray-600 mb-4">${article.summary}</p>
+                            <a href="#" class="read-more-link ${article.categoryColor} font-semibold hover:underline" data-id="${article.id}">Read More &rarr;</a>
+                        </div>
+                    </div>
+                `;
+                articlesGrid.innerHTML += cardHtml;
+            }
+        }
+
+        /**
+         * Renders the full content of a single article.
+         * @param {string} articleId The ID of the article to render.
+         */
+        function renderArticle(articleId) {
+            const article = articles[articleId];
+            if (!article) {
+                console.error('Article not found!');
+                return;
+            }
+
+            const sourcesHtml = article.sources.map(source =>
+                `<a href="${source.url}" target="_blank" class="source-link">${source.name}</a>`
+            ).join('');
+
+            const videoHtml = article.videoUrl ? `
+                <div class="bg-gray-100 p-4 rounded-lg my-6 text-center">
+                    <p class="mb-3 text-gray-700">This video can't be played here, but you can watch it on YouTube.</p>
+                    <a href="${article.videoUrl}" target="_blank" class="inline-block bg-red-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors shadow">
+                        <i class="fab fa-youtube mr-2"></i>Watch on YouTube
+                    </a>
+                </div>
+            ` : '';
+
+            const fullArticleHtml = `
+                <a href="#" class="back-to-home text-blue-600 font-semibold hover:underline mb-8 inline-block">&larr; Back to All Articles</a>
+                <header class="mb-8">
+                     <span class="text-sm ${article.categoryColor} font-semibold">${article.category} &bull; ${article.date}</span>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 my-4 leading-tight">${article.title}</h1>
+                    <p class="text-xl text-gray-500">${article.summary}</p>
+                </header>
+                <img src="${article.fullImage}" alt="${article.fullImageAlt}" class="w-full rounded-lg mb-8 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/800x500/000000/FFFFFF?text=Image';">
+                <div class="article-content">
+                    ${article.content}
+                    ${videoHtml}
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <h4 class="text-lg font-semibold mb-3">Sources:</h4>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                            ${sourcesHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            articleContainer.innerHTML = fullArticleHtml;
             showPage(articlePage);
-        });
+        }
 
-        backToHomeLink.addEventListener('click', showHomepage);
-        homeNavLink.addEventListener('click', showHomepage);
-        
-        // Make nav links go to homepage (as other pages aren't built)
-        navLinks.forEach(link => {
-            if(link.textContent.trim().toLowerCase() === 'home'){
-                 link.addEventListener('click', showHomepage);
+        // --- EVENT LISTENERS ---
+
+        // Listen for clicks on the grid to handle "Read More"
+        articlesGrid.addEventListener('click', (e) => {
+            if (e.target.matches('.read-more-link')) {
+                e.preventDefault();
+                const articleId = e.target.dataset.id;
+                renderArticle(articleId);
             }
         });
 
+        // Listen for clicks on the article page to handle "Back to Home"
+        articlePage.addEventListener('click', (e) => {
+            if (e.target.matches('.back-to-home')) {
+                e.preventDefault();
+                showPage(homepage);
+            }
+        });
 
-        // Initialize to show the homepage
+        // Generic home links and About link
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage(homepage);
+        });
+        navLinks.forEach(link => {
+            const linkText = link.textContent.trim().toLowerCase();
+            if (linkText === 'home') {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(homepage);
+                });
+            } else if (linkText === 'about') {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(aboutPage);
+                });
+            }
+        });
+
+        // --- INITIALIZATION ---
+        renderHomepage();
         showPage(homepage);
     </script>
 
 </body>
+
 </html>
+�
